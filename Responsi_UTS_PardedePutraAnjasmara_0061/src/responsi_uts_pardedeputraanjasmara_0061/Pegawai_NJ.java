@@ -4,21 +4,21 @@
  */
 package responsi_uts_pardedeputraanjasmara_0061;
 
-/**
- *
- * @author AnjasAnjasAnjas
+/*
+ * Kelas Induk (Superclass) untuk memodelkan Pegawai secara umum.
  */
 public class Pegawai_NJ {
     // Enkapulasi: atribut private
     private String namaPegawai;
     private double gaji;
     
+    // Konstruktor
     public Pegawai_NJ(String namaPegawai, double gaji) {
         this.namaPegawai = namaPegawai;
         this.gaji = gaji;
     }
     
-    //Getter dan Setter
+    // --- METODE GETTER DAN SETTER ---
     public String GetNamaPegawai() {
         return namaPegawai;
     }

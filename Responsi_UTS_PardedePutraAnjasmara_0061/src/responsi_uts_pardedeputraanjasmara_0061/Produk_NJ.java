@@ -4,41 +4,48 @@
  */
 package responsi_uts_pardedeputraanjasmara_0061;
 
-/**
- *
- * @author AnjasAnjasAnjas
+/*
+ * KONSEP ENKAPSULASI:
+ * Kelas Produk_NJ bertindak sebagai Superclass (Kelas Induk).
+ * Semua atribut diatur menjadi 'private' agar data dilindungi dari akses langsung dari luar kelas.
  */
 public class Produk_NJ {
-    // Enkapulasi: atribut private
+    // Atribut privat (Enkapulasi)
     private String namaProduk;
     private double harga;
     
-    // Konstruktor
+    // Konstruktor: Digunakan untuk menginisialisasi nilai awal objek saat dibuat
     public Produk_NJ(String namaProduk, double harga) {
-        this.namaProduk = namaProduk;
+        this.namaProduk = namaProduk; // 'this' merujuk pada atribut milik kelas ini
         this.harga = harga;
     }
     
-    //  Getter dan Setter
+    // --- METODE GETTER DAN SETTER (Akses Data Terenkapsulasi) ---
+    
+    // Getter: Mengembalikan nilai dari atribut privat namaProduk
     public String getNamaProduk() {
         return namaProduk;
     }
     
+    // Setter: Mengubah/mengisi nilai dari atribut privat namaProduk
     public void setNamaProduk(String namaProduk) {
         this.namaProduk = namaProduk;
     }
     
+    // Getter untuk harga
     public double getHarga() {
         return harga;
     }
     
+    // Setter untuk harga
     public void setHarga(double harga) {
         this.harga = harga;
     }
     
-    // Methode untuk menampilkan informasi
+    // Metode untuk menampilkan informasi dasar produk
     public void tampilkanInfo() {
         System.out.println("Nama Produk: " + namaProduk);
+        // (long) digunakan untuk type casting agar angka desimal (.0) dibuang saat dicetak
         System.out.println("Harga: " + (long) harga);
     }
 }

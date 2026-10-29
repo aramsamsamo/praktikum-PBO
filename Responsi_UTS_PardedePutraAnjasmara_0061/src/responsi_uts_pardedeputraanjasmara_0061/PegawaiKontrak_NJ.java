@@ -4,18 +4,19 @@
  */
 package responsi_uts_pardedeputraanjasmara_0061;
 
-/**
- *
- * @author AnjasAnjasAnjas
+/*
+ * Subclass dari Pegawai_NJ khusus untuk Pegawai Kontrak.
  */
 public class PegawaiKontrak_NJ extends Pegawai_NJ{
-    private int kontrak;
+    private int kontrak; // Atribut khusus lama kontrak (dalam bulan)
     
+    // Konstruktor
     public PegawaiKontrak_NJ(String namaProduk, double gaji, int kontrak) {
-        super(namaProduk, gaji);
+        super(namaProduk, gaji); // Mengirim data pegawai ke kelas induk
         this.kontrak = kontrak;
     }
     
+    // Getter dan Setter
     public int GetKontrak() {
         return kontrak;
     }
@@ -24,9 +25,10 @@ public class PegawaiKontrak_NJ extends Pegawai_NJ{
         this.kontrak = kontrak;
     }
     
+    // Overriding metode tampilkanInfo
     @Override
     public void tampilkanInfo() {
-        super.tampilkanInfo();
+        super.tampilkanInfo(); // Memanggil pencetakan nama dan gaji
         System.out.println("Lama Kontrak: " + kontrak + " Bulan");
     }
 }
